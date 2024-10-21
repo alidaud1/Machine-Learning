@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymptoSense</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js" defer></script> <!-- Include the JavaScript file -->
+</head>
+<body>
+    <div class="header">
+        <h1>SymptoSense</h1>
+    </div>
+    <div class="container" style="background: #d1c4e9;">
+        <div class="column">
+            <h2>Search Here</h2>
+            <input class="search" type="text" id="search" onkeyup="filterFeatures()" placeholder="Search...">
+            <div class="column" style="height: 300px; overflow-y: auto;">
+            <form action="/predict" method="post">
+                {% for feature in feature_names %}
+                    <label for="{{ feature }}">{{ feature }}</label>
+                    <input type="checkbox" id="{{ feature }}" name="{{ feature }}" value="1" onchange="updateCheckedFeatures()"><br>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="column">
+            <h2>Patient has sympthoms</h2>
+            <div id="checkedFeatures"></div> <!-- Display checked checkboxes here -->
+        </div>
+        <div class="column">
+            <h2>Click to Predict</h2>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction %}
+          <h2>Prediction: {{ prediction }}</h2><hr>
+          <p><strong>Description:</strong> {{ description }}</p>
+          <p><strong>Precautions:</strong> {{ precautions }}</p>
+          <p><strong>Medications:</strong> {{ medications }}</p>
+        {% endif %}
+        </div>
+    </div>
+</body>
+</html>
