@@ -8,7 +8,6 @@ Welcome to the **Machine-Learning** repository! This repository is dedicated to 
 - [Current Files](#current-files)
 - [Projects](#projects)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
