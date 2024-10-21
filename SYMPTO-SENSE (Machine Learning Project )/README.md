@@ -46,7 +46,7 @@ The project consists of the following files and folders:
  
 ## Project Interface
 
-![SYMPTO SENSE Interface](path/to/your/demo-image.png)
+![SYMPTO SENSE Interface](https://github.com/alidaud1/Machine-Learning/blob/main/SYMPTO-SENSE%20(Machine%20Learning%20Project%20)/asset.png?raw=true)
 
 ## Installation
 
